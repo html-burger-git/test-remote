@@ -1,0 +1,176 @@
+/* ------------------------------------------------------------ *\
+	List details
+\* ------------------------------------------------------------ */
+
+.list-details {
+	display: flex;
+	flex-wrap: wrap;
+	margin: -1.6rem;
+	padding-left: 0;
+	list-style: none;  
+
+	@include breakpoint-down(small-desktop) {
+		margin: -1rem;
+	}
+
+	@include breakpoint-down(mobile) {
+		margin: 0;
+	}
+
+	li + li {
+		@include breakpoint-down(mobile) {
+			margin-top: 2.8rem; 
+		}
+	}
+
+	li {
+		max-width: 25%;
+		flex: 0 0 25%;
+		max-width: 100%;
+		flex: 1 0;
+		padding: 1.6rem;
+		text-align: center;
+		font-size: 1.8rem;
+		line-height: 1.77;
+		letter-spacing: -.02em;
+		color: #565B75;
+
+		@include breakpoint-down(small-desktop) {
+			padding: 1rem;
+		}
+
+		@include breakpoint-down(tablet) {
+			font-size: 1.6rem;
+		}
+
+		@include breakpoint-down(mobile) {
+			max-width: 100%;
+			flex: 0 0 100%;
+			padding: 0;
+		}
+
+		br {
+			@include breakpoint-down(mobile) {
+				display: none;
+			}
+		}
+
+		div {
+			background-color: #F7F9FC;
+			padding: 3rem;
+			height: 100%;
+
+			@include breakpoint-down(tablet) {
+				padding: 1.5rem;
+			}
+
+			@include breakpoint-down(mobile) {
+				padding: 3rem;
+			}
+		}
+
+		span {
+			display: inline-block;
+			position: relative;
+			background-color: #ECF0F5;
+			min-height: 6.4rem;
+			min-width: 6.4rem;
+			margin-bottom: 1rem;
+
+			@include breakpoint-down(mobile) {
+				min-height: 4.8rem;
+				min-width: 4.8rem;
+			}
+
+			img {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+		}
+
+		h6 {
+			font-size: 2rem;
+			letter-spacing: -.02em;
+			font-weight: 500;
+			color: #07081B;
+
+			@include breakpoint-down(tablet) {
+				font-size: 1.6rem;
+				letter-spacing: .04em;
+				text-transform: uppercase;
+			}
+
+		}
+
+		h6 + p {
+			margin-top: 1rem; 
+		}
+
+		h6 + .btn {
+			margin-top: 1.3rem; 
+		}
+	}
+
+	.btn--dark {
+		padding: 0 1rem;
+		font-size: 1.6rem;
+		min-height: 3.2rem;
+		line-height: 3.2rem;
+		min-width: 11.3rem;
+
+		&:hover {
+			background-color: #3477F5;
+		}
+
+		img {
+			display: inline-block;
+			margin: -.6rem .9rem 0 0;
+		}
+	}
+}
+
+.list-details--dark {
+	padding: 2rem 7rem;
+	background-color: #031A61;
+
+	@include breakpoint-down(small-desktop) {
+		padding: 2rem 4rem;
+	}
+
+	@include breakpoint-down(tablet) {
+		padding: 2rem 0;
+	}
+
+	@include breakpoint-down(mobile) {
+		padding: 0;
+	}
+
+	li {
+		max-width: 33.33%;
+		flex: 0 0 33.33%;
+
+		@include breakpoint-down(mobile) {
+			max-width: 100%;
+			flex: 0 0 100%;
+		}
+
+		div {
+			background-color: #031A61;
+			color: $c-white;
+
+			@include breakpoint-down(mobile) {
+				background-color: #13296C;
+			}
+		}
+
+		h6 {
+			color: $c-white;
+		}
+
+		span {
+			background-color: #13296C;
+		}
+	}
+}

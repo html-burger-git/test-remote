@@ -1,0 +1,101 @@
+
+/* ------------------------------------------------------------ *\
+	Section alt
+\* ------------------------------------------------------------ */
+
+.section-alt {
+	padding: 8.5rem 0 12rem;
+
+	@include breakpoint-down(mobile) {
+		padding: 6.3rem 0 7rem;
+	}
+
+	.section__content {
+		padding-right: 3rem;
+
+		@include breakpoint-down(mobile) {
+			padding-right: 0; 
+			margin-bottom: 4rem;
+		}
+
+		h3 {
+			font-weight: 700;
+			color: #07081B;
+			letter-spacing: -.002em;
+			margin-bottom: 2.8rem;
+
+			@include breakpoint-down(mobile) {
+				font-size: 3.2rem;
+				line-height: 1.25;
+				padding-left: 16px; 
+			}
+		}
+	}
+
+	.list-security {
+		list-style: none;
+		padding: 0;
+
+		li {
+			padding: 2.4rem 2rem 2.4rem 2.7rem;
+			font-size: 1.8rem;
+			line-height: 1.33;
+			letter-spacing: -.02em;
+			color: #565B75;
+
+			@include breakpoint-down(mobile) {
+				font-size: 1.4rem;;
+				line-height: 1.71;
+			}
+
+			h6 {
+				font-size: 2rem;
+				line-height: 1.2;
+				color: #07081B;
+				letter-spacing: -.002em;
+				position: relative;
+				padding-left: 3.4rem; 
+				font-weight: 500; 
+
+				@include breakpoint-down(mobile) {
+					font-size: 1.8rem;
+				}
+
+				img {
+					position: absolute;
+					top: 0;
+					left: 0;
+				}
+			}
+
+			&.is-active {
+				background-color: #F7F9FC;
+			}
+		} 
+
+		li + li {
+			margin-top: 4.5rem;
+
+			@include breakpoint-down(mobile) {
+			 	margin-top: 1.1rem; 
+			 } 
+		}
+	}
+
+	.section__image {
+		padding-right: 5rem;
+
+		@include breakpoint-down(mobile) {
+			padding: 0 5rem;
+		}
+
+		@include breakpoint-down(mobile-small) {
+			padding: 0;
+		}
+
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+}

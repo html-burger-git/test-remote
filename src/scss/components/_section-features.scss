@@ -1,0 +1,15 @@
+/* ------------------------------------------------------------ *\
+	Section features
+\* ------------------------------------------------------------ */
+
+.section-features {
+	padding: 6.4rem 0 0;
+
+	@include breakpoint-down(mobile) {
+		padding: 42px 0 40px;
+	}
+
+	.features {
+		margin-bottom: 2.5rem;
+	}
+}

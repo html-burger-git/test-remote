@@ -1,0 +1,39 @@
+/* ------------------------------------------------------------ *\
+	Footer bar
+\* ------------------------------------------------------------ */
+
+.footer-bar {
+	background-color: #031A61;
+	padding: 1.5rem 0;
+
+	@include breakpoint-down(mobile) {
+		padding: 3.4rem 0;
+	}
+
+	.container {
+		max-width: 116rem;
+	}
+
+	.footer-bar__inner {
+		display: flex;
+		justify-content: space-between;
+		font-size: 1.4rem;
+		letter-spacing: -.02em;
+		color: $c-white;
+
+		@include breakpoint-down(mobile) {
+			display: block;
+			text-align: center;
+		}
+
+		p {
+			margin-bottom: 0;
+		}
+
+		p + p {
+			@include breakpoint-down(mobile) {
+				margin-top: 4rem; 
+			}
+		}
+	}
+}

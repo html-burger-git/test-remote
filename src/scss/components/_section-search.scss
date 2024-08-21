@@ -1,0 +1,60 @@
+/* ------------------------------------------------------------ *\
+	Section search
+\* ------------------------------------------------------------ */
+
+.section-search {
+	padding: 3.5rem 0;
+
+	.search {
+		background-color: #031A61;
+		padding: 3.2rem 4rem;
+
+		@include breakpoint-down(mobile) {
+			margin: 0 -2.4rem;
+			padding: 1.5rem 2.4rem;
+		}
+
+		.input-group {
+			display: block;
+			position: relative;
+
+			input {
+				width: 100%;
+				min-height: 8.8rem;
+				padding: 2.7rem 2rem 2rem 9rem;
+				font-size: 3.2rem;
+				color: $c-white;
+				letter-spacing: -.02em;
+				background-color: #13296C;
+				border: none;
+
+				@include breakpoint-down(mobile) {
+					padding: 1.5rem 1rem 1.5rem 6.6rem;
+					font-size: 1.8rem;
+					min-height: 6.4rem;
+				}
+			}
+
+			input::placeholder {
+				color: $c-white;
+			}
+		}
+
+		.btn {
+			padding: 0;
+			min-height: 0;
+			min-width: 0;
+			position: absolute;
+			top: 50%;
+			left: 4.5rem;
+			transform: translateY(-50%);
+			background-color: transparent;
+
+			@include breakpoint-down(mobile) {
+				max-width: 2rem;
+				left: 2.7rem;
+				top: 46%;
+			}
+		}
+	}
+}

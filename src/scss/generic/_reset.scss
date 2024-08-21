@@ -1,6 +1,6 @@
-// ==========================================================================
-// Reset
-// ==========================================================================
+/* ------------------------------------------------------------ *\
+	Reset
+\* ------------------------------------------------------------ */
 
 * {
 	padding: 0;
@@ -109,7 +109,6 @@ input::-moz-focus-inner {
 	border: 0;
 }
 
-input[type="button"],
 input[type="text"],
 input[type="password"],
 input[type="date"],
@@ -183,15 +182,19 @@ input:-webkit-autofill {
 	-webkit-box-shadow: 0 0 0 1000px #fff inset;
 }
 
+input[type=text],
+input[type=button],
+input[type=tel],
+input[type=email],
+input[type=submit],
+input[type=date],
+input[type=search],
+textarea {
+	appearance: none;
+}
+
 @media (prefers-reduced-motion: no-preference) {
 	:root {
 		scroll-behavior: smooth;
-	}
-}
-
-@media (prefers-reduced-motion: reduce) {
-	* {
-		transition: none !important;
-		animation: none !important;
 	}
 }

@@ -1,0 +1,19 @@
+/* ------------------------------------------------------------ *\
+	Section callout
+\* ------------------------------------------------------------ */
+
+.section-callout {
+	padding: 7rem 0 7.2rem;
+
+	@include breakpoint-down(mobile) {
+		padding: 4rem 0;
+	}
+
+	.container {
+		max-width: 116rem;
+	}
+
+	&--size1 {
+		padding: 9.5rem 0 9.6rem; 
+	}
+}

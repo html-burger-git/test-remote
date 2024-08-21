@@ -1,0 +1,68 @@
+/* ------------------------------------------------------------ *\
+	List partners
+\* ------------------------------------------------------------ */
+
+.list-partners {
+	padding-left: 0;
+	list-style: none;
+	display: flex; 
+	flex-wrap: wrap;  
+	margin: -1.6rem -3.4rem;
+
+	@include breakpoint-down(small-desktop) {
+		margin: -1rem;
+	}
+
+	li {
+		max-width: calc(100% / 8);
+		flex: 0 0 calc(100% / 8);
+		padding: 1.6rem 2.6rem;
+		position: relative;
+
+		@include breakpoint-down(tablet) {
+			padding: 1rem;
+		}
+
+		@include breakpoint-down(mobile) {
+			max-width: calc(100% / 3);
+			flex: 0 0 calc(100% / 3);
+		}
+
+		a {
+			position: relative;
+			display: block;
+			min-width: 9.6rem;
+			min-height: 9.6rem;
+			letter-spacing: -.02em;
+			font-weight: 700;
+
+			@include breakpoint-down(tablet) {
+				min-width: 100%;
+			}
+
+			@include breakpoint-down(mobile) {
+				border: .1rem solid #F7F9FC;
+			}
+
+			img,
+			span {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+		}
+
+		span {
+			font-weight: 700;
+			font-size: 2.4rem;
+		}
+	}
+
+	li:last-child {
+
+		a {
+			background-color: #F7F9FC;
+		}
+	}
+}

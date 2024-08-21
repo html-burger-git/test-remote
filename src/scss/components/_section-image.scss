@@ -1,0 +1,28 @@
+/* ------------------------------------------------------------ *\
+	Section image
+\* ------------------------------------------------------------ */
+
+.section-image {
+	padding: 2rem 0 3.2rem;
+
+	@include breakpoint-down(mobile) {
+		text-align: center;
+		padding: 1.5rem 0 .4rem;
+	}
+
+	.section__image {
+		@include breakpoint-down(mobile) {
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
+	}
+	.row {
+		margin: -2rem;
+
+		.col {
+			padding: 2rem;
+		}
+	}
+}

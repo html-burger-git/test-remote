@@ -1,0 +1,87 @@
+/* ------------------------------------------------------------ *\
+	Nav
+\* ------------------------------------------------------------ */
+
+.navbar {
+	display: block;
+	padding: 0;
+
+	@include breakpoint-down(small-desktop) {
+		margin-right: 2rem; 
+	}
+
+	@include breakpoint-down(mobile) {
+		margin-right: 0; 
+	}
+
+	.navbar-nav {
+		display: flex;
+		flex-direction: row;
+
+		@include breakpoint-down(mobile) {
+			display: block;
+			text-align: center;
+		}
+
+		li + li {
+			margin-left: 6.8rem; 
+
+			@include breakpoint-down(tablet) {
+				margin-left: 1rem; 
+			}
+
+			@include breakpoint-down(mobile) {
+				margin: 1rem 0 0 0;
+			}
+		}
+
+		.nav-link {
+			font-size: 1.4rem;
+			letter-spacing: -.02em;
+			color: #373D54;
+			display: inline-block;
+			padding: 0;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+
+		li {
+			position: relative;
+
+			&.is-active .nav-link:after {
+				transform: rotate(180deg);
+			}
+		}
+
+		li:hover {
+			.nav-link + .dropdown-menu {
+				opacity: 1;
+				visibility: visible;  
+			}
+
+			.nav-link {
+				&:after {
+					transform: rotate(180deg);
+
+					@include breakpoint-down(mobile) {
+						transform: none;
+					}
+				}
+			}
+		}
+
+		.dropdown-toggle::after {
+			margin-left: 1rem;
+			border-top: .4rem solid;  
+			transition: transform $t-duration;
+		}
+
+	}
+}
+
+.test {
+	opacity: 1;
+	visibility: visible;  
+}

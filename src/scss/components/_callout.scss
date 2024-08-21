@@ -1,0 +1,54 @@
+/* ------------------------------------------------------------ *\
+	Callout
+\* ------------------------------------------------------------ */
+
+.callout {
+	background-color: #031A61;
+	color: $c-white;
+	padding: 7.2rem 8.5rem 7.4rem 11.3rem;
+
+	@include breakpoint-down(tablet) {
+		padding: 3rem 4rem;
+	}
+
+	@include breakpoint-down(mobile) {
+		width: 100vw;
+		margin: 0 -2.4rem;
+		padding: 5.2rem 2.6rem 5.7rem;
+	}
+
+	.callout__content {
+		font-size: 1.8rem;
+		letter-spacing: -.02em;
+		font-weight: 500;
+		line-height: 1.77;
+		padding-right: 5rem; 
+
+		@include breakpoint-down(mobile) {
+			padding: 0;
+			text-align: center;
+			margin-bottom: 5rem;
+
+		}
+
+		h4 {
+			line-height: 1.25;
+			margin-bottom: 1.1rem;
+			font-weight: 400;
+
+			@include breakpoint-down(mobile) {
+				font-size: 3.2rem;
+				font-weight: 700;
+				letter-spacing: -.002em;
+			}
+		}
+
+		p {
+			margin-bottom: 3rem;
+		}
+	}
+
+	.callout__aside {
+		text-align: center;
+	}
+}

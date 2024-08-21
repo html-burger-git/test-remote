@@ -1,19 +1,29 @@
-// ==========================================================================
-// Variables
-// ==========================================================================
+//Variables
+$font-size-base             : 1.6rem;
+$font-weight-base           : 400;
+$line-height-base           : 1.2;
 
-:root {
-	--fz-html: 62.5%;
-	--fz-base: 1.6rem;
-	--fw-base: 400;
-	--lh-base: 1.2;
-	--ff-base: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	--c-base: #000;
-}
+$ff-sans-serif              : "Helvetica Neue", Helvetica, Arial, sans-serif;
+$ff-serif                   : Georgia, "Times New Roman", Times, serif;
+$ff-avenir                  : "Avenir LT Pro", Helvetica, Arial, sans-serif;
+
+$t-duration                 : 0.4s;
+
+$shell-max-width            : 114rem;
+$shell-gutter               : 1.5rem;
+
+$c-black                    : #000;
+$c-white                    : #fff;
+$c-base                     : #055590;
+
+$responsive-ios             : 812px;
 
 $breakpoints: (
 	mobile-small: 374px,
+	mobile-medium: 575px,
 	mobile: 767px,
+	admin-bar: 782px,
 	tablet: 1023px,
 	small-desktop: 1199px,
+	large-desktop: 1399px
 );

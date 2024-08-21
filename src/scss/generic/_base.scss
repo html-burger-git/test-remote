@@ -1,73 +1,135 @@
-// ==========================================================================
-// Base
-// ==========================================================================
+/* ------------------------------------------------------------ *\
+	Base
+\* ------------------------------------------------------------ */
 
 html {
-	font-size: var(--fz-html);
+	font-size: 62.5%;
 }
 
 body {
 	min-width: 320px;
-	font-family: var(--ff-base);
-	font-weight: var(--fw-base);
-	font-size: var(--fz-base);
-	line-height: var(--lh-base);
-	color: var(--c-base);
+	background: #fff;
+	font-family: $ff-avenir;
+	font-weight: $font-weight-base;
+	font-size: $font-size-base;
+	line-height: $line-height-base;
+	color: #000;
+}
+
+.container {
+	max-width: 114rem;
+	width: 100%;	
+
+	@include breakpoint-down(mobile) {
+		padding: 0 2.4rem;
+	}
+}
+
+.container--size-1 {
+	max-width: 130rem;
+}
+
+.container--size-2 {
+	max-width: 108rem;
+}
+
+.container--size-3 {
+	max-width: 116rem;
+}
+
+.container--size-4 {
+	max-width: 126rem;
+}
+
+.container--size-5 {
+	max-width: 119.4rem;
 }
 
 a {
 	color: inherit;
 	text-decoration: underline;
 
-	@media (hover: hover) {
-		&:where(:hover, :focus-visible) {
-			text-decoration: none;
-		}
+	&:hover {
+		text-decoration: none;
 	}
 
-	&[href^='tel'] {
+	&[href^="tel"] {
 		text-decoration: none;
 	}
 }
 
-.level-1,
+
+.h1,
 h1,
-.level-2,
+.h2,
 h2,
-.level-3,
+.h3,
 h3,
-.level-4,
+.h4,
 h4,
-.level-5,
+.h5,
 h5,
-.level-6,
+.h6,
 h6 {
-	margin-bottom: calc(var(--lh-base) * 0.5em);
+	margin-bottom: calc(#{$line-height-base}em / 2);
 }
 
-.level-1,
+.h1,
 h1 {
+	font-size: 5.6rem;
+
+	@include breakpoint-down(tablet) {
+		font-size: 4.8rem;
+	}
+
+	@include breakpoint-down(mobile) {
+		font-size: 3.2rem;
+	}
 }
 
-.level-2,
+.h2,
 h2 {
+	font-size: 4.8rem;
+
+	@include breakpoint-down(tablet) {
+		font-size: 4rem;
+	}
 }
 
-.level-3,
+.h3,
 h3 {
+	font-size: 4rem;
+
+	@include breakpoint-down(tablet) {
+		font-size: 3.2rem;
+	}
+
+	@include breakpoint-down(mobile) {
+		font-size: 2.4rem;
+	}
 }
 
-.level-4,
+.h4,
 h4 {
+	font-size: 3.2rem;
+
+	@include breakpoint-down(tablet) {
+		font-size: 2.4rem;
+	}
 }
 
-.level-5,
+.h5,
 h5 {
+	font-size: 2.4rem;
+
+	@include breakpoint-down(tablet) {
+		font-size: 2rem;
+	}
 }
 
-.level-6,
-h6 {
-}
+.h6,
+h6 {}
+
 
 p,
 ul,
@@ -76,7 +138,7 @@ dl,
 hr,
 table,
 blockquote {
-	margin-bottom: calc(var(--lh-base) * 0.5em);
+	margin-bottom: #{$line-height-base}em;
 }
 
 h1[class],

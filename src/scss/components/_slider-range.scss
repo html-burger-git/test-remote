@@ -1,0 +1,23 @@
+/* ------------------------------------------------------------ *\
+	Slider range
+\* ------------------------------------------------------------ */
+
+.slider-range {
+	border-radius: 0;
+	background-color: #ECF0F5;
+	height: .8rem;
+	border: none !important;
+
+	.ui-slider-range {
+		background-color: #031A61;
+		border-radius: 0;
+	}
+
+	.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
+		width: 1.6rem;
+		height: 1.6rem;
+		border: .4rem solid $c-white;
+		background-color: #031A61;
+		box-shadow: 0px 1.49544px 1.49544px rgba(50, 50, 71, 0.06), 0px 1.49544px 2.99088px rgba(50, 50, 71, 0.06);
+	}
+}

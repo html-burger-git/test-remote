@@ -1,0 +1,34 @@
+/* ------------------------------------------------------------ *\
+	List checks
+\* ------------------------------------------------------------ */
+
+.list-checks {
+	list-style: none;
+	padding-left: 0;
+	font-size: 1.8rem;
+	line-height: 1.77;
+	letter-spacing: -.02em;
+
+	@include breakpoint-down(small-desktop) {
+		font-size: 1.6rem;
+	}
+
+	li {
+		position: relative;
+		padding-left: 46px; 
+
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}  
+
+	li + li {
+		margin-top: 1.6rem; 
+
+		@include breakpoint-down(mobile) {
+			margin-top: 1.9rem; 
+		}
+	}
+}

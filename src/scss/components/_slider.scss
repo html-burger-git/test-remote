@@ -1,0 +1,72 @@
+/* ------------------------------------------------------------ *\
+	Slider
+\* ------------------------------------------------------------ */
+
+.slider {
+	.slider__slides {
+		margin: -2rem;
+
+		.slider__slide {
+			padding: 2rem;
+		}
+	}
+
+	.slick-current {
+		.card {
+			background-color: #13286C;
+
+			.btn {
+				background-color: #3477F5;
+				border-color: #3477F5;
+				color: $c-white;
+			}
+		}
+	}
+
+	.slick-dots {
+		list-style: none;
+		padding-left: 0;
+		display: flex;
+		justify-content: center;
+
+		li + li {
+			margin-left: .8rem; 
+		}  
+
+		button {
+			background-color: rgba(255, 255, 255, .25);
+			width: .6rem;
+			height: .6rem;
+			border: none;
+			outline: none;
+			font-size: 0;
+			transition: background-color $t-duration, width $t-duration, height $t-duration;
+		}
+
+		.slick-active {
+			button {
+				background-color: $c-white;
+				width: .8rem;
+				height: .8rem;
+			}
+		}
+	}
+}
+
+.slider--secondary {
+	@include breakpoint-down(mobile) {
+		margin: 0 -24px;
+	}
+
+	.slider__slides {
+		@include breakpoint-down(mobile) {
+			margin: 0;
+		}
+
+		.slider__slide {
+			@include breakpoint-down(mobile) {
+				padding: 0
+			}
+		}
+	}
+}

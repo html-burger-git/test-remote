@@ -1,0 +1,161 @@
+/* ------------------------------------------------------------ *\
+	Accordion
+\* ------------------------------------------------------------ */
+
+.accordion {
+	max-width: 100rem;
+	margin: 0 auto;
+
+	.accordion-item {
+		background-color: #F7F9FC;
+		border: none;
+		border-radius: 0;
+		min-height: 7.4rem;
+	}
+
+	.accordion-button {
+		background-color: #F7F9FC;
+		padding: 2.7rem 1rem 2.7rem 6.8rem;
+		position: relative;
+		font-size: 1.8rem;
+		color: #373D54;
+		letter-spacing: -.014em;
+		box-shadow: none;
+
+		@include breakpoint-down(mobile) {
+			padding: 2.4rem 22px 2.4rem 6.2rem;
+			line-height: 1.33;
+		}
+
+		img {
+			position: absolute;
+			top: 2.7rem;
+			left: 3.4rem;
+			transition: opacity $t-duration, visibility $t-duration;
+
+			@include breakpoint-down(mobile) {
+				top: 50%;
+				transform: translateY(-50%);
+				left: 2.9rem;
+			}
+		}
+
+		&:after {
+			display: none;
+		}
+
+		.accordion__minus {
+			opacity: 0;
+			visibility: hidden;  
+		}
+	}
+
+	.accordion-button:not(.collapsed) {
+		.accordion__plus {
+			opacity: 0;
+			visibility: hidden;  
+		}
+
+		.accordion__minus {
+			opacity: 1;
+			visibility: visible;  
+		}
+	}
+
+	.accordion-body {
+		padding: 0 3.8rem 2.6rem 3.3rem;
+		font-size: 1.6rem;
+		letter-spacing: -.02em;
+		line-height: 1.5;
+		color: #565B75;
+		position: relative;
+		z-index: 2;
+
+		@include breakpoint-down(mobile) {
+			padding: 0 2.5rem 2rem 2.5rem;
+		}
+	}
+
+	.accordion-item + .accordion-item {
+		margin-top: 1.3rem; 
+
+		@include breakpoint-down(mobile) {
+			margin-top: 1.6rem; 
+		}
+	}
+}
+
+.accordion--primary {
+	padding-right: 8.6rem;
+
+	@include breakpoint-down(tablet) {
+		padding-right: 2rem; 
+	}
+
+	.accordion-item {
+		min-height: 0;
+
+		@include breakpoint-down(mobile) {
+			background-color: transparent;
+		}
+	}
+
+	.accordion-item + .accordion-item {
+		@include breakpoint-down(mobile) {
+			margin-top: 10px; 
+		}
+	}
+
+	.accordion-collapse {
+		@include breakpoint-down(mobile) {
+			background-color: #F7F9FC;
+		}
+	}
+
+	.accordion-button {
+		padding: 1.7rem 1rem 1.8rem 5.1rem;
+		font-size: 2rem;
+		line-height: 1.2;
+		letter-spacing: -.02em;
+
+		@include breakpoint-down(mobile) {
+			background-color: #F7F9FC;
+			font-size: 1.8rem;
+			line-height: 1.77;
+			padding: 1.6rem 1rem 1.6rem 5.8rem;
+		}
+
+		@include breakpoint-down(mobile-small) {
+			font-size: 1.6rem;
+		}
+
+		&.collapsed {
+			@include breakpoint-down(mobile) {
+				background-color: transparent;
+			}
+		}
+
+		img {
+			top: 1.5rem;
+			left: 1.2rem;
+
+			@include breakpoint-down(mobile) {
+				top: 3.2rem;
+				left: 2.1rem;
+			}
+		}
+	} 
+
+	.accordion-body {
+		padding: 0 3rem 1.3rem 1.3rem;
+		font-size: 1.8rem;
+		line-height: 1.33;
+
+		@include breakpoint-down(mobile) {
+			font-size: 1.4rem;
+			letter-spacing: -.02em;
+			padding: 0 1rem 1.3rem 1.9rem;
+			line-height: 1.72;
+		}
+	}
+}

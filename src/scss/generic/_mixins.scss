@@ -1,21 +1,9 @@
-// ==========================================================================
-// Mixins
-// ==========================================================================
-
-//
-// Clearfix
-// ==========================================================================
-
 @mixin clearfix {
 	content: '';
 	line-height: 0;
 	display: table;
 	clear: both;
 }
-
-//
-// Breakpoint mixins
-// ==========================================================================
 
 @mixin breakpoint-up($name, $breakpoints: $breakpoints) {
 	$min: breakpoint-min($name, $breakpoints);
@@ -28,8 +16,14 @@
 @mixin breakpoint-down($name, $breakpoints: $breakpoints) {
 	$max: breakpoint-max($name, $breakpoints);
 
-	@media (max-width: $max) {
-		@content;
+	@if $max == 767px {
+		@media (max-width: $max), screen and (max-width: $responsive-ios) and (orientation: landscape) {
+			@content;
+		}
+	} @else {
+		@media (max-width: $max) {
+			@content;
+		}
 	}
 }
 
@@ -41,3 +35,15 @@
 		@content;
 	}
 }
+
+/* example usage*/
+
+// @include breakpoint-down(mobile) {
+//	@content
+// }
+// @include breakpoint-down(mobile) {
+//	@content
+// }
+// // @include breakpoint-between(mobile,tablet) {
+//	@content
+// }

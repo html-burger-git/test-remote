@@ -1,0 +1,383 @@
+/* ------------------------------------------------------------ *\
+	Form
+\* ------------------------------------------------------------ */
+
+.form {
+	@include breakpoint-down(mobile) {
+		text-align: left;
+	}
+
+	.form-row {
+		display: flex;
+		flex-wrap: wrap;
+		margin: -1.6rem -2.1rem;
+
+		@include breakpoint-down(tablet) {
+			margin: -1rem;
+		}
+
+		.form-group {
+			padding: 1.6rem 2.1rem;
+
+			@include breakpoint-down(tablet) {
+				padding: 1rem;
+			}
+		}
+
+		.form-group + .form-group {
+			@media (max-width: 767px) {
+				margin-top: 2.8rem; 
+			}
+		}
+	}
+
+
+	label {
+		font-size: 1.8rem;
+		letter-spacing: -.02em;
+		color: #878CA6;
+		font-weight: 500;
+		display: block;
+		margin-bottom: 1.6rem;
+
+		@include breakpoint-down(tablet) {
+			font-size: 1.6rem;
+			margin-bottom: 1rem;
+		}
+
+		@include breakpoint-down(mobile) {
+			font-size: 1.8rem;
+			margin-bottom: 1.9rem;
+		}
+	}
+
+	.form-control {
+		min-height: 4.8rem;
+		border-radius: 0;
+		background-color: #F7F9FC;
+		padding: 0 1.8rem;
+		border: none;
+		outline: none;
+		font-size: 1.8rem;
+		color: #07081B;
+		font-weight: 500;
+		width: 100%;	
+		letter-spacing: -.02em;
+	}
+
+	.form-control::placeholder {
+		color: #07081B;
+		opacity: 1; 
+	}
+
+	.form-control + .slider-range {
+		margin-top: 2.2rem; 
+
+		@include breakpoint-down(tablet) {
+			margin-top: 1rem; 
+		}
+
+		@include breakpoint-down(mobile) {
+			margin-top: 2rem; 
+		}
+	}
+
+	.select {
+		position: relative;
+
+		&:after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			right: 1.8rem;
+			transform: translateY(-50%);
+			width: 1rem;
+			height: .5rem;
+			pointer-events: none;
+			background-image: url(../images/svg/ico-arrow-select.svg);
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+	}
+
+	.custom-select {
+		min-height: 4.8rem;
+		border-radius: 0;
+		background-color: #F7F9FC;
+		padding: 0 1.8rem;
+		border: none;
+		outline: none;
+		font-size: 1.8rem;
+		color: #07081B;
+		font-weight: 500;
+		letter-spacing: -.02em;
+		width: 100%;	
+		appearance: none;
+	}
+
+	.form__actions {
+		padding: 3.5rem 0 3rem;
+
+		@include breakpoint-down(mobile) {
+			padding: 4.2rem 0 4.4rem;
+		}
+
+		.btn {
+			font-size: 1.6rem;
+			letter-spacing: .04em;
+			text-transform: uppercase;
+			padding: 0 1.8rem;
+			min-height: 4rem;
+			line-height: 4rem;
+
+			svg {
+				display: inline-block;
+				margin: -.6rem .3rem 0 0;
+			}
+		}
+	}
+}
+
+.form--dark {
+	label {
+		color: $c-white;
+	}
+
+	.form-control {
+		background-color: #13296C;
+		color: $c-white;
+		font-weight: 400;
+	}
+
+	.form-control::placeholder {
+		color: $c-white;
+	}
+
+	.form-group + .form-group {
+		margin-top: 2.3rem; 
+
+		@include breakpoint-down(mobile) {
+			margin-top: 2rem; 
+		}
+	}
+
+	.form__actions {
+		text-align: center;
+		padding-bottom: 0;
+
+		@include breakpoint-down(mobile) {
+			padding-top: 2.2rem; 
+		}
+
+		.btn {
+			font-size: 1.4rem;
+			text-transform: capitalize;
+			letter-spacing: -.02em;
+			padding: 0 3rem;
+			min-height: 4.8rem;
+			line-height: 4.8rem;
+		}
+	}
+}
+
+.form--sign-up {
+	.form-row {
+		margin: -.8rem -1.2rem;
+
+		@include breakpoint-down(mobile) {
+			margin: 0;
+		}
+
+		.form-group {
+			padding: .8rem 1.2rem;
+
+			@include breakpoint-down(mobile) {
+				padding: 0; 
+			}
+		}		
+
+		.form-group + .form-group {
+			@include breakpoint-down(mobile) {
+				margin-top: 1rem; 
+			}
+		}
+	}
+
+	label {
+		margin-bottom: .8rem;
+
+		@include breakpoint-down(mobile) {
+			font-size: 1.6rem;
+		}
+	}
+
+	.form-control {
+		font-size: 1.6rem;
+	}
+
+	.form__actions {
+		padding-top: 3rem;
+		text-align: center;
+
+		.btn {
+			background-color: #3477F5;
+			min-width: 100%;
+			font-size: 1.4rem;
+			text-transform: capitalize;
+			min-height: 4.8rem;
+			line-height: 4.8rem;
+		}
+
+		.form__title {
+			display: block;
+			text-align: center;
+			position: relative;
+			padding: 1.4rem 0 1.5rem;
+
+			h6 {
+				display: inline-block;
+				position: relative;
+				z-index: 2; 
+				min-width: 10.2rem;
+				padding: 0 20px;
+				background-color: $c-white;
+				font-size: 1.4rem;
+				font-weight: 400;
+			}
+
+			&:after {
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 0;
+				transform: translateY(-50%);
+				width: 100%;
+				height: .1rem;
+				background-color: #DFE3EC;	
+
+			}
+		}
+
+		ul {
+			display: flex;
+			flex-wrap: wrap;
+			margin: -1.2rem;
+			list-style: none;
+			padding-left: 0; 
+			margin-bottom: 1.2rem; 
+
+			@include breakpoint-down(mobile) {
+				margin-bottom: 2.3rem;
+			}
+
+			li {
+				max-width: 50%;
+				flex: 0 0 50%;
+				padding: 1.2rem;
+
+				.btn {
+					background-color: #F7F9FC;
+				}
+			}
+		}
+
+		p {
+			font-size: 1.4rem;
+			color: #565B75;
+			letter-spacing: .02em;
+			line-height: 1.5;
+
+			a {
+				color: #373D54;
+			}
+		}
+
+		.form__entry {
+			font-size: 1.6rem;
+
+			a {
+				display: inline-block;
+				padding-left: .3rem; 
+			}
+		}
+
+		p + p {
+			margin-top: 5.5rem; 
+
+			@include breakpoint-down(mobile) {
+				margin-top: 3.5rem; 
+			}
+		}
+	}
+}
+
+.form--secondary {
+	.form-row {
+		margin: -1.2rem;
+
+		@include breakpoint-down(mobile) {
+			margin: 0;
+		}
+
+		.form-group {
+			padding: 1.2rem;
+
+			@include breakpoint-down(mobile) {
+				padding: 0;
+			}
+		}
+
+		.form-group + .form-group {
+			@include breakpoint-down(mobile) {
+				margin-top: 2.1rem; 
+			}
+		}
+	}
+
+	label {
+		color: $c-white;
+		line-height: 1.77;
+		margin-bottom: 1.2rem;
+
+		@include breakpoint-down(mobile) {
+			margin-bottom: .8rem;
+		}
+	}
+
+	.form__body {
+		margin-bottom: .6rem;
+
+		@include breakpoint-down(mobile) {
+			margin-bottom: 3rem;
+		}
+	}
+
+	.form-control {
+		color: $c-white;
+		font-size: 1.6rem;
+		letter-spacing: -.02em;
+		background-color: #13296C;
+	}
+
+	.form-control::placeholder {
+		color: $c-white;
+	}
+
+	.form__actions {
+		padding-bottom: 0;
+
+		@include breakpoint-down(mobile) {
+			padding: 0;
+		}
+		.btn {
+			min-width: 100%;
+			font-size: 1.4rem;
+			letter-spacing: -.02em;
+			text-transform: none;
+			min-height: 4.8rem;
+			line-height: 4.8rem;
+		}
+	}
+
+}

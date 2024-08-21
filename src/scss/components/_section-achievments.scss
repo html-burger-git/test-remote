@@ -1,0 +1,12 @@
+/* ------------------------------------------------------------ *\
+	Section achievments
+\* ------------------------------------------------------------ */
+
+.section-achievments {
+	padding: 1rem 0;
+	background-color: #F7F9FC;
+
+	@include breakpoint-down(mobile) {
+		padding: 40px 0 2rem;
+	}
+}

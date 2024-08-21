@@ -1,0 +1,45 @@
+/* ------------------------------------------------------------ *\
+	Box accordion
+\* ------------------------------------------------------------ */
+
+.box-accordion {
+	.box__image {
+		margin-left: -2.5rem; 
+
+		@include breakpoint-down(tablet) {
+			margin: 0;
+		}
+
+		@include breakpoint-down(mobile) {
+			margin-top: 5.6rem; 
+		}
+	}
+}
+
+/*  Accordion reversed  */
+
+.box-accordion--reversed {
+	.box__image {
+		margin: 0 -2.3rem 0 0;
+
+		@include breakpoint-down(tablet) {
+			margin: 0;
+		}
+
+		@include breakpoint-down(mobile) {
+			margin-top: 2.8rem; 
+		}
+	}
+
+	.accordion {
+		padding: 0 0 0 8.6rem;
+
+		@include breakpoint-down(tablet) {
+			padding: 0 0 0 2rem;
+		}
+
+		@include breakpoint-down(mobile) {
+			padding: 0;
+		}
+	}
+}
